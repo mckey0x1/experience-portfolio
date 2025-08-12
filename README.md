@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dynamic Experience Portfolio Dashboard
 
-## Getting Started
+A modern, responsive React application for showcasing professional hospitality experience data with advanced filtering and interactive project details.
 
-First, run the development server:
+## Overview
 
+This application dynamically renders professional experience data from the hospitality industry, allowing users to explore career progression, project implementations, and operational achievements across different property types and locations.
+
+## Technical Approach
+
+### Architecture Decisions
+
+**Component-Based Design**
+- Modular components for maintainability and reusability
+- Clear separation of concerns between data, logic, and presentation
+- Each component handles a specific aspect of the user interface
+
+
+### Filtering System
+
+**Multi-Criteria Filtering**
+- Property type (business, heritage, resort)
+- Year-based filtering
+- Flagship property toggle
+- Full-text search across multiple fields
+
+
+### ExperienceCard
+- Main container for each professional experience
+- Expandable design to show/hide project details
+- Color-coded by property type with flagship indicators
+
+### ProjectCard
+- Detailed view of individual projects
+- Metrics visualization and team member display
+- Expandable sections for comprehensive project information
+
+### FilterPanel
+- Centralized filtering interface
+- Search functionality across multiple data fields
+- Visual feedback for active filters
+
+### Custom Hooks
+- `useExperienceFilters`: Manages filter state and applies filtering logic
+- Memoized filtering for performance optimization
+
+
+**Optimized Rendering**
+- Memoized filtering to prevent unnecessary re-calculations
+- Efficient component updates using React's reconciliation
+- Lazy loading of detailed project information
+
+**Data Handling**
+- Graceful handling of missing or null data fields
+- Fallback displays for empty states
+- Efficient array operations for filtering and searching
+
+
+### Installation
 ```bash
+# Clone the repository
+git clone [repository-url]
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
+```bash
+# Run development server with hot reload
+npm run dev
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Build for production
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Preview production build
+npm run preview
+```
 
-## Learn More
+## Data Format
 
-To learn more about Next.js, take a look at the following resources:
+The application expects data in the following structure:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```typescript
+interface Experience {
+  id: string;
+  property: string;
+  propertyType: 'business' | 'heritage' | 'resort';
+  isFlagship: boolean;
+  role: string;
+  location: string;
+  duration: string;
+  projects: Project[];
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
