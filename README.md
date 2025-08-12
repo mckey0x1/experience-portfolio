@@ -24,17 +24,6 @@ This application dynamically renders professional experience data from the hospi
 - Flagship property toggle
 - Full-text search across multiple fields
 
-
-### ExperienceCard
-- Main container for each professional experience
-- Expandable design to show/hide project details
-- Color-coded by property type with flagship indicators
-
-### ProjectCard
-- Detailed view of individual projects
-- Metrics visualization and team member display
-- Expandable sections for comprehensive project information
-
 ### FilterPanel
 - Centralized filtering interface
 - Search functionality across multiple data fields
