@@ -48,7 +48,7 @@ This application dynamically renders professional experience data from the hospi
 ### Installation
 ```bash
 # Clone the repository
-git clone [repository-url]
+git clone https://github.com/mckey0x1/experience-portfolio.git
 
 # Install dependencies
 npm install
