@@ -1,4 +1,4 @@
-# Dynamic Experience Portfolio Dashboard
+# Experience Portfolio Dashboard
 
 A modern, responsive React application for showcasing professional hospitality experience data with advanced filtering and interactive project details.
 
