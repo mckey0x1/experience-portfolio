@@ -68,25 +68,3 @@ npm run build
 # Preview production build
 npm run preview
 ```
-
-## Data Format
-
-The application expects data in the following structure:
-
-```typescript
-interface Experience {
-  id: string;
-  property: string;
-  propertyType: 'business' | 'heritage' | 'resort';
-  isFlagship: boolean;
-  role: string;
-  location: string;
-  duration: string;
-  projects: Project[];
-}
-```
-
-
-## License
-
-This project is licensed under the MIT License.
