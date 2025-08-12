@@ -29,21 +29,6 @@ This application dynamically renders professional experience data from the hospi
 - Search functionality across multiple data fields
 - Visual feedback for active filters
 
-### Custom Hooks
-- `useExperienceFilters`: Manages filter state and applies filtering logic
-- Memoized filtering for performance optimization
-
-
-**Optimized Rendering**
-- Memoized filtering to prevent unnecessary re-calculations
-- Efficient component updates using React's reconciliation
-- Lazy loading of detailed project information
-
-**Data Handling**
-- Graceful handling of missing or null data fields
-- Fallback displays for empty states
-- Efficient array operations for filtering and searching
-
 
 ### Installation
 ```bash
